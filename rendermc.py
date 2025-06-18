@@ -3,14 +3,14 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 PORT = int(os.environ.get("PORT", 5000))
 login_data = {
-    "username": "yildy", 
-    "email": "",
+    "username": "yildy", # đổi thành username acc mcserver vào đây
+    "email": "", # hoặc dùng mail để mail thì thôi username 
     "password": {
-        "value": "r8LsGQJi9LqAkN.",
+        "value": "r8LsGQJi9LqAkN.", # password điền vào 
         "repeat": ""
     }
 }
-sub_url = "https://www.mcserverhost.com/api/servers/f53b96c0/subscription"
+sub_url = "https://www.mcserverhost.com/api/servers/f53b96c0/subscription" # dán vào đây 
 def run_automation():
     session = requests.Session()
     while True:
