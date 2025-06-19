@@ -5,10 +5,10 @@ app = Flask(__name__)
 PORT = int(os.environ.get("PORT", 5000))
 
 login_data = {
-    "username": "zatarainbown", # đổi thành username acc mcserver vào đây
+    "username": "yildy", # đổi thành username acc mcserver vào đây
     "email": "", # hoặc dùng mail để mail thì thôi username 
     "password": {
-        "value": "baongoccoder", # password điền vào 
+        "value": "r8LsGQJi9LqAkN.", # password điền vào 
         "repeat": ""
     }
 }
