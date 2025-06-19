@@ -1,16 +1,21 @@
 import requests,json,time,os,threading 
 from flask import Flask, jsonify, request
+
 app = Flask(__name__)
 PORT = int(os.environ.get("PORT", 5000))
+
 login_data = {
-    "username": "yildy", # đổi thành username acc mcserver vào đây
+    "username": "zatarainbown", # đổi thành username acc mcserver vào đây
     "email": "", # hoặc dùng mail để mail thì thôi username 
     "password": {
-        "value": "r8LsGQJi9LqAkN.", # password điền vào 
+        "value": "baongoccoder", # password điền vào 
         "repeat": ""
     }
 }
-sub_url = "https://www.mcserverhost.com/api/servers/f53b96c0/subscription" # dán vào đây 
+
+login_url = "https://www.mcserverhost.com/api/login"
+sub_url = "https://www.mcserverhost.com/api/servers/f53b96c0/subscription" # dán vào đây
+ 
 def run_automation():
     session = requests.Session()
     while True:
@@ -24,10 +29,13 @@ def run_automation():
         else:
             print(f"Lỗi {response.status_code} - {response.text}")
         time.sleep(3000)
+
 @app.route('/')
 def home():
     return "Renew đang chạy."
+
 if __name__ == '__main__':
+
     au= threading.Thread(target=run_automation)
     au.daemon = True
     au.start()
