@@ -14,7 +14,7 @@ login_data = {
 }
 
 login_url = "https://www.mcserverhost.com/api/login"
-sub_url = "https://www.mcserverhost.com/api/servers/f53b96c0/subscription" # dán vào đây
+sub_url = "https://www.mcserverhost.com/api/servers/7ac807a3/subscription" # dán vào đây
  
 def run_automation():
     session = requests.Session()
